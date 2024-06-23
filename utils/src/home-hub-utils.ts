@@ -10,3 +10,11 @@ export const loginFunction = (data: FormValues) => {
 	localStorage.setItem('auth', JSON.stringify(data));
 	return location.replace(`/dashboard/${authId}/`);
 };
+
+export const checkIsAuthenticated = () => {
+	const auth = localStorage.getItem('auth');
+	if (!auth) {
+		return { isAuthenticated: false, authInfo: undefined };
+	}
+	return { isAuthenticated: true, authInfo: JSON.parse(auth) };
+};
