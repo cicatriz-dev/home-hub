@@ -10,6 +10,10 @@ export const loginFunction = (email: AuthInfo['email']) => {
 	location.replace(`/dashboard/${authId}/`);
 };
 
+export const logoutFunction = () => {
+	return location.replace('/');
+};
+
 export const checkIsAuthenticated = () => {
 	const auth = localStorage.getItem('auth');
 	if (!auth) {
