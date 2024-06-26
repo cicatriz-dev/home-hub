@@ -1,11 +1,12 @@
-type FormValues = {
+export type AuthInfo = {
 	email: string;
-	password: string;
+	firstName?: string;
+	lastName?: string;
 };
 
-export const loginFunction = (data: FormValues) => {
-	const authId = data.email.replace('@', '').replace('.', '').codePointAt(0);
-	localStorage.setItem('auth', JSON.stringify(data));
+export const loginFunction = (email: AuthInfo['email']) => {
+	const authId = email.replace('@', '').replace('.', '').codePointAt(0);
+	localStorage.setItem('auth', JSON.stringify({ email: email }));
 	location.replace(`/dashboard/${authId}/`);
 };
 
@@ -14,6 +15,6 @@ export const checkIsAuthenticated = () => {
 	if (!auth) {
 		return { authInfo: undefined, isAuthenticated: false };
 	}
-	const authObj = JSON.parse(auth);
+	const authObj: AuthInfo = JSON.parse(auth);
 	return { authInfo: authObj, isAuthenticated: true };
 };

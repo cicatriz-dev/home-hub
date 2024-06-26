@@ -17,6 +17,7 @@ import {
 import { useEffect, useState } from 'react';
 
 import { AccountCircle } from '@mui/icons-material';
+import { AuthInfo } from '../../utils/src/home-hub-utils';
 import HomeHubLogo from './assets/home-hub.png';
 import LockIcon from '@mui/icons-material/Lock';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -28,7 +29,7 @@ import WifiIcon from '@mui/icons-material/Wifi';
 
 export default function App() {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-	const [authInfo, setAuthInfo] = useState<{ email: string; password: string } | undefined>();
+	const [authInfo, setAuthInfo] = useState<AuthInfo | undefined>();
 
 	useEffect(() => {
 		const auth = localStorage.getItem('auth');
