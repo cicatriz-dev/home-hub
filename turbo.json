@@ -5,8 +5,8 @@
 			"dependsOn": ["^build"],
 			"outputs": [".next/**", "!.next/cache/**"]
 		},
-		"check-format": {
-			"dependsOn": ["^check-format"]
+		"prepare": {
+			"dependsOn": ["^prepare"]
 		},
 		"dev": {
 			"persistent": true,
