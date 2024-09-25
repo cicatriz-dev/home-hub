@@ -9,11 +9,15 @@
 	"scripts": {
 		"dev": "turbo run dev",
 		"build": "turbo run build",
-		"clean": "turbo run clean && rm -rf node_modules"
+		"clean": "turbo run clean && rm -rf node_modules",
+		"check": "turbo run prepare",
+		"test": "echo \"No tests\"",
+		"prepare": "husky"
 	},
 	"author": "Pedro Mello",
 	"license": "ISC",
 	"devDependencies": {
+		"husky": "^9.1.6",
 		"turbo": "^2.1.2"
 	},
 	"packageManager": "npm@10.2.4"
