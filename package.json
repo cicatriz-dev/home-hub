@@ -9,6 +9,7 @@
 	"scripts": {
 		"dev": "turbo run dev",
 		"build": "turbo run build",
+		"build:webpack": "turbo run build:webpack",
 		"clean": "turbo run clean && rm -rf node_modules",
 		"check": "turbo run prepare",
 		"prepare": "husky"
