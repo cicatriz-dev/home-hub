@@ -6,14 +6,11 @@
 		"build": "concurrently npm:build:*",
 		"build:webpack": "webpack --mode=production",
 		"analyze": "webpack --mode=production --env analyze",
-		"lint": "eslint src --ext js,ts,tsx",
 		"format": "prettier --write .",
 		"check-format": "prettier --check .",
-		"test": "cross-env BABEL_ENV=test jest",
-		"watch-tests": "cross-env BABEL_ENV=test jest --watch",
-		"coverage": "cross-env BABEL_ENV=test jest --coverage",
 		"build:types": "tsc",
-		"dev": "webpack serve --port 8503"
+		"dev": "webpack serve --port 8503",
+		"prepare": "npm run format && npm run check-format && npm run build:types"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.23.3",
