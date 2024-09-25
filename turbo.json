@@ -5,8 +5,8 @@
 			"dependsOn": ["^build"],
 			"outputs": [".next/**", "!.next/cache/**"]
 		},
-		"check-types": {
-			"dependsOn": ["^check-types"]
+		"check-format": {
+			"dependsOn": ["^check-format"]
 		},
 		"dev": {
 			"persistent": true,
