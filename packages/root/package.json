@@ -9,7 +9,8 @@
     "prepare": "husky install",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
-    "build:types": "tsc"
+    "build:types": "tsc",
+    "dev": "echo \"Hello World!!!\""
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",

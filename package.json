@@ -1,14 +1,20 @@
 {
-  "name": "home-hub",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Pedro Mello",
-  "license": "ISC",
-  "devDependencies": {
-    "turbo": "^2.1.2"
-  }
+	"name": "home-hub",
+	"workspaces": [
+		"./apps/*",
+		"./packages/*"
+	],
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"dev": "turbo run dev",
+		"build": "turbo run build",
+		"clean": "turbo run clean && rm -rf node_modules"
+	},
+	"author": "Pedro Mello",
+	"license": "ISC",
+	"devDependencies": {
+		"turbo": "^2.1.2"
+	},
+	"packageManager": "npm@10.2.4"
 }
