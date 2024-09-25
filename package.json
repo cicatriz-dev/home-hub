@@ -11,7 +11,7 @@
 		"build": "turbo run build",
 		"clean": "turbo run clean && rm -rf node_modules",
 		"check": "turbo run prepare",
-		"test": "echo \"No tests\"",
+		"lint": "echo \"No lint\"",
 		"prepare": "husky"
 	},
 	"author": "Pedro Mello",
